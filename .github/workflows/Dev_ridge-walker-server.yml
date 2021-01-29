@@ -21,16 +21,16 @@ jobs:
         node-version: '12.x'
     - name: apt-get update
       run: |
-        sudo apt-get update
+        sudo apt-get update -y
     - name: install imagemagick
       run: |
-        sudo apt-get install imagemagick ghostscript poppler-utils
+        sudo apt-get install imagemagick -y
     - name: install ghostscript
       run: |
-        sudo apt-get install ghostscript poppler-utils
+        sudo apt-get install ghostscript -y
     - name: install poppler-utils
       run: |
-        sudo apt-get install poppler-utils
+        sudo apt-get install poppler-utils -y
     - name: install global typescript/tsnode
       run: |
         sudo npm install typescript -g && npm install ts-node -g
