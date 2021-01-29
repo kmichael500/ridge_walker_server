@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node build/src/server.ts",
+    "start": "node build/src/server.js",
     "dev": "ts-node-dev src/server.ts --max-old-space-size=4096",
     "build": "npm run compile",
     "test": "echo \"Error: no test specified\" && exit 1",
