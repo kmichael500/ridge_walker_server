@@ -171,7 +171,6 @@ masterPointsAPI.post('/', (req, res, next) => {
     sortBy,
   } = req.body as MasterPointPaginationReq;
 
-  console.log("Hiiii")
   interface comparisonI {
     cmp: '<=' | '<';
     L: number | null;

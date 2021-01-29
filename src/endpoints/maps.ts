@@ -47,8 +47,11 @@ mapsAPI.get('/image/:mapName.png', (req, res, next) => {
     if (process.env.ROOTFOLDER) {
       rootFolder = process.env.ROOTFOLDER;
     }
+
+    console.log("Getting maps.")
     const pdfPath = rootFolder + '/public/maps/' + req.params.mapName + '.pdf';
     const pageNumber = 0;
+    console.log("Root: " + rootFolder);
     const pdfImage = new PDFImage(pdfPath, {
       convertOptions: {
         // '-resize': '80%',
@@ -75,6 +78,7 @@ mapsAPI.get('/image/:mapName.png', (req, res, next) => {
       }
     );
   } catch (error) {
+    console.log(error);
     res.sendStatus(404);
   }
 });
@@ -86,6 +90,9 @@ mapsAPI.get('/:id/getAll', (req, res, next) => {
   if (process.env.ROOTFOLDER) {
     rootFolder = process.env.ROOTFOLDER;
   }
+
+  console.log("getting all maps")
+  console.log("root folder: " + rootFolder);
   console.log(rootFolder + 'public/maps');
   glob(
     searchString,
@@ -98,6 +105,7 @@ mapsAPI.get('/:id/getAll', (req, res, next) => {
         try {
           res.json(files);
         } catch (error) {
+          console.log(error);
           res.sendStatus(404);
         }
       }
