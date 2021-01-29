@@ -21,7 +21,7 @@ jobs:
         node-version: '12.x'
     - name: apt-get update
       run: |
-        sudo apt-get update -y
+        apt-get update && apt-get upgrade -y && apt-get autoremove && apt-get autoclean
     - name: install imagemagick
       run: |
         sudo apt-get install imagemagick -y
