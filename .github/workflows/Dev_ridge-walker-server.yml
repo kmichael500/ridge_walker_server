@@ -23,6 +23,10 @@ jobs:
     - name: install pdf conversion dependencies
       run: |
         sudo apt-get install imagemagick ghostscript poppler-utils
+    - name: install global typescript/tsnode
+      run: |
+        sudo npm install typescript -g
+        sudo npm install ts-node -g
 
     - name: npm install, build, and test
       run: |
