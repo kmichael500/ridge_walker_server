@@ -19,15 +19,15 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
+    - name: apt-get update
+      run: |
+        sudo apt-get update
     - name: install pdf conversion dependencies
       run: |
-        apt-get update
-    - name: install pdf conversion dependencies
-      run: |
-        install imagemagick ghostscript poppler-utils
+        sudo apt-get install imagemagick ghostscript poppler-utils
     - name: install global typescript/tsnode
       run: |
-        npm install typescript -g && npm install ts-node -g
+        sudo npm install typescript -g && npm install ts-node -g
     - name: npm install, build, and test
       run: |
         npm install
