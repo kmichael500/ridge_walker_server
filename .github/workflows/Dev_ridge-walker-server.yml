@@ -22,9 +22,15 @@ jobs:
     - name: apt-get update
       run: |
         sudo apt-get update
-    - name: install pdf conversion dependencies
+    - name: install imagemagick
       run: |
         sudo apt-get install imagemagick ghostscript poppler-utils
+    - name: install ghostscript
+      run: |
+        sudo apt-get install ghostscript poppler-utils
+    - name: install poppler-utils
+      run: |
+        sudo apt-get install poppler-utils
     - name: install global typescript/tsnode
       run: |
         sudo npm install typescript -g && npm install ts-node -g
