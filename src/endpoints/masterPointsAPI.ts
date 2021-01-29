@@ -171,6 +171,7 @@ masterPointsAPI.post('/', (req, res, next) => {
     sortBy,
   } = req.body as MasterPointPaginationReq;
 
+  console.log("Hiiii")
   interface comparisonI {
     cmp: '<=' | '<';
     L: number | null;
@@ -352,7 +353,7 @@ masterPointsAPI.post('/', (req, res, next) => {
     pagination,
     page,
     limit,
-    projection: {score: {$meta: 'textScore'}},
+    // projection: {score: {$meta: 'textScore'}},
     orderBy: sortOrder,
     lean: true,
     collation: {
