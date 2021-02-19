@@ -52,7 +52,7 @@ userAPI.post('/login', async (req, res, next) => {
         const body = JSON.parse(JSON.stringify(user));
         delete body.password;
         //Sign the JWT token and populate the payload with the user email and id
-        const token = jwt.sign({user: body}, 'top_secret', {expiresIn: '1d'});
+        const token = jwt.sign({user: body}, 'top_secret', {expiresIn: '30d'});
         //Send back the token to the user
         return res.json({token, user: body});
       });
