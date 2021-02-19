@@ -3,7 +3,7 @@
 **Server config**
 
 ```bash
-# create a .env file in the project root dirrecotry
+# create a .env file in the project root directory
 MONGOURI=mongo_connection_string_here
 ```
 
