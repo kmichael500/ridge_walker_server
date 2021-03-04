@@ -1,0 +1,22 @@
+{
+    "git.autofetch": true,
+    "editor.largeFileOptimizations": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.associations": {
+        "*.ts": "typescript"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+      },
+    "eslint.validate": [
+        "typescript",
+        "typescriptreact"
+    ],
+    "eslint.packageManager" : "npm",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave":true,
+    },
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+}
