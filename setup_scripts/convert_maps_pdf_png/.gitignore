@@ -1,3 +1,6 @@
-pdfs
-images
-final_structure
+
+# Ignore sensitive files that are produced by the script
+*.pdf
+*.png
+*.svg
+*.txt
