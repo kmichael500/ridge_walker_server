@@ -1,0 +1,19 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "11:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: ts-node-dev
+    versions:
+    - 1.1.1
+    - 1.1.3
+  - dependency-name: "@types/passport-jwt"
+    versions:
+    - 3.0.4
+  - dependency-name: lokijs
+    versions:
+    - 1.5.11
